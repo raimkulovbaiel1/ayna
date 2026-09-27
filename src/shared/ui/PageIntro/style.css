@@ -1,0 +1,63 @@
+.page-intro {
+  padding: 72px 9% 20px;
+  background:
+    radial-gradient(ellipse 70% 80% at 100% 0%, #d8f3e9 0%, transparent 55%),
+    linear-gradient(180deg, #eef8f3 0%, #f6faf7 100%);
+}
+
+.page-intro-inner {
+  max-width: 720px;
+  animation: page-intro-in 0.7s ease both;
+}
+
+.page-intro h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+  margin: 14px 0 16px;
+  color: #173a32;
+}
+
+.page-intro h1 em {
+  font-style: normal;
+  color: #159b79;
+}
+
+.page-intro p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #71837e;
+  max-width: 560px;
+}
+
+@keyframes page-intro-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .page-intro {
+    padding: 55px 6% 10px;
+  }
+
+  .page-intro h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-intro {
+    padding: 40px 20px 8px;
+  }
+
+  .page-intro h1 {
+    font-size: 30px;
+  }
+}

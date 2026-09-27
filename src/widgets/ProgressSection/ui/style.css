@@ -1,0 +1,79 @@
+.progress-section {
+  background: #f0f7f4;
+}
+
+.week {
+  font-size: 12px;
+  color: #82938d;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 2fr;
+  gap: 16px;
+}
+
+.metric,
+.chart {
+  background: white;
+  border-radius: 20px;
+  padding: 22px;
+  border: 1px solid #e2ece8;
+}
+
+.metric span,
+.metric small {
+  display: block;
+  color: #81918d;
+  font-size: 11px;
+}
+
+.metric strong {
+  font-size: 34px;
+  display: block;
+  margin: 12px 0 4px;
+}
+
+.metric small {
+  color: #159b79;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.bars {
+  height: 115px;
+  display: flex;
+  align-items: end;
+  gap: 14px;
+}
+
+.bars i {
+  flex: 1;
+  max-width: 30px;
+  background: #7dd5bd;
+  border-radius: 7px 7px 2px 2px;
+}
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #879691;
+  font-size: 10px;
+}
+
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}

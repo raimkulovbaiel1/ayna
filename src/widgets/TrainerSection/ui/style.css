@@ -1,0 +1,520 @@
+.trainer-section {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.trainer-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.trainer-portrait {
+  position: relative;
+  min-height: 520px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #dff5ed, #b8e4d4);
+  animation: rise-in 0.7s ease both;
+}
+
+.trainer-photo {
+  object-fit: cover;
+}
+
+.trainer-photo-empty {
+  height: 100%;
+  min-height: 520px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 32px;
+}
+
+.trainer-initial {
+  width: 88px;
+  height: 88px;
+  border-radius: 28px;
+  background: #159b79;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.trainer-photo-empty strong {
+  color: #29453f;
+  font-size: 16px;
+}
+
+.trainer-photo-empty small {
+  color: #6f827c;
+  font-size: 12px;
+}
+
+.trainer-copy {
+  animation: rise-in 0.75s ease 0.08s both;
+}
+
+.trainer-copy h2 {
+  font-size: 48px;
+  letter-spacing: -1.8px;
+  margin: 12px 0 8px;
+  color: #173a32;
+}
+
+.trainer-role {
+  margin: 0 0 18px;
+  color: #159b79;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.trainer-lead {
+  margin: 0 0 28px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4d635c;
+  max-width: 540px;
+}
+
+.trainer-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e2ece8;
+}
+
+.trainer-facts strong {
+  display: block;
+  font-size: 28px;
+  color: #173a32;
+  letter-spacing: -0.8px;
+}
+
+.trainer-facts span {
+  font-size: 12px;
+  color: #7a8f88;
+}
+
+.trainer-story {
+  margin: 0 0 16px;
+  color: #71837e;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.trainer-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 28px 0 32px;
+}
+
+.trainer-columns h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: #173a32;
+}
+
+.trainer-columns ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.trainer-columns li {
+  font-size: 13px;
+  color: #4d635c;
+  padding-left: 14px;
+  position: relative;
+}
+
+.trainer-columns li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #159b79;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+
+.trainer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+} 
+
+
+
+
+
+.trainer-photo {
+  object-fit: cover;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-user-drag: none;
+  user-drag: none;
+
+  pointer-events: none;
+} 
+.trainer-portrait {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+
+
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TRAINER — ADAPTIVE
+   Desktop styles unchanged
+========================= */
+
+@media (max-width: 900px) {
+  .trainer-section {
+    padding-top: 32px;
+    padding-bottom: 70px;
+  }
+
+  .trainer-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* Фото */
+  .trainer-portrait {
+    width: 100%;
+    height: 500px;
+    min-height: 500px;
+    border-radius: 28px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  .trainer-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+
+    pointer-events: none;
+  }
+
+  .trainer-photo-empty {
+    min-height: 500px;
+    padding: 28px;
+  }
+
+  /* Текст */
+  .trainer-copy h2 {
+    font-size: 42px;
+    line-height: 1.05;
+    letter-spacing: -1.4px;
+    margin: 10px 0 8px;
+  }
+
+  .trainer-role {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .trainer-lead {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 26px;
+  }
+
+  /* Факты */
+  .trainer-facts {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+    padding-bottom: 26px;
+  }
+
+  .trainer-facts strong {
+    font-size: 25px;
+  }
+
+  .trainer-facts span {
+    font-size: 11px;
+  }
+
+  /* История */
+  .trainer-story {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Образование */
+  .trainer-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 26px 0 30px;
+  }
+
+  .trainer-columns h3 {
+    margin-bottom: 12px;
+  }
+
+  .trainer-columns li {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .trainer-section {
+    padding-top: 24px;
+    padding-bottom: 52px;
+  }
+
+  .trainer-layout {
+    gap: 28px;
+  }
+
+  /* =========================
+     PHOTO
+  ========================= */
+
+  .trainer-portrait {
+    height: 390px;
+    min-height: 390px;
+    border-radius: 22px;
+
+    /* защита */
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  .trainer-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* запрет выделения */
+    user-select: none;
+    -webkit-user-select: none;
+
+    /* запрет перетаскивания */
+    -webkit-user-drag: none;
+    user-drag: none;
+
+    /* отключаем взаимодействие непосредственно с img */
+    pointer-events: none;
+  }
+
+  .trainer-photo-empty {
+    min-height: 390px;
+    padding: 22px;
+  }
+
+  .trainer-initial {
+    width: 72px;
+    height: 72px;
+    border-radius: 22px;
+    font-size: 30px;
+  }
+
+  .trainer-photo-empty strong {
+    font-size: 14px;
+  }
+
+  .trainer-photo-empty small {
+    font-size: 11px;
+    word-break: break-word;
+  }
+
+  /* =========================
+     TEXT
+  ========================= */
+
+  .trainer-copy h2 {
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin: 8px 0 8px;
+  }
+
+  .trainer-role {
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .trainer-lead {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  /* =========================
+     FACTS
+  ========================= */
+
+  .trainer-facts {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 22px;
+  }
+
+  .trainer-facts strong {
+    font-size: 21px;
+    letter-spacing: -0.5px;
+  }
+
+  .trainer-facts span {
+    display: block;
+    margin-top: 3px;
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  /* =========================
+     STORY
+  ========================= */
+
+  .trainer-story {
+    margin-bottom: 14px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* =========================
+     EDUCATION
+  ========================= */
+
+  .trainer-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 24px 0 0;
+  }
+
+  .trainer-columns h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .trainer-columns ul {
+    gap: 9px;
+  }
+
+  .trainer-columns li {
+    font-size: 12px;
+    line-height: 1.55;
+    padding-left: 13px;
+  }
+
+  .trainer-columns li::before {
+    width: 5px;
+    height: 5px;
+    top: 6px;
+  }
+
+  /* Кнопки, если потом включишь */
+  .trainer-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .trainer-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .trainer-section {
+    padding-top: 20px;
+    padding-bottom: 42px;
+  }
+
+  .trainer-layout {
+    gap: 24px;
+  }
+
+  .trainer-portrait {
+    height: 330px;
+    min-height: 330px;
+    border-radius: 20px;
+  }
+
+  .trainer-photo-empty {
+    min-height: 330px;
+  }
+
+  .trainer-copy h2 {
+    font-size: 32px;
+  }
+
+  .trainer-role {
+    font-size: 12px;
+  }
+
+  .trainer-lead {
+    font-size: 14px;
+  }
+
+  .trainer-facts {
+    gap: 7px;
+  }
+
+  .trainer-facts strong {
+    font-size: 19px;
+  }
+
+  .trainer-facts span {
+    font-size: 9px;
+  }
+
+  .trainer-story {
+    font-size: 12px;
+  }
+
+  .trainer-columns li {
+    font-size: 11px;
+  }
+}
+
+
+

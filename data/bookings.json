@@ -1,0 +1,44 @@
+[
+  {
+    "id": "bk_1790268238419_azmgl6",
+    "createdAt": "2026-09-24T16:43:58.419Z",
+    "patientName": "raimkulovbaiel",
+    "phone": "0556488554",
+    "comment": "fgfgfg",
+    "serviceId": "month",
+    "serviceName": "Месячный абонемент",
+    "price": "14 500",
+    "unit": "сом",
+    "date": "2026-10-09",
+    "time": "09:00",
+    "status": "paid"
+  },
+  {
+    "id": "bk_1790267509664_i4yvez",
+    "createdAt": "2026-09-24T16:31:49.664Z",
+    "patientName": "raimkulov baiel",
+    "phone": "0556488554",
+    "comment": "dfdfdfdfdffffffffffffffffffffffffffffffffffffffff",
+    "serviceId": "month",
+    "serviceName": "Месячный абонемент",
+    "price": "14 500",
+    "unit": "сом",
+    "date": "2026-10-08",
+    "time": "11:00",
+    "status": "paid"
+  },
+  {
+    "id": "bk_1790262558525_dh99u5",
+    "createdAt": "2026-09-24T15:09:18.525Z",
+    "patientName": "прпна",
+    "phone": "0556488554",
+    "comment": "5е",
+    "serviceId": "single",
+    "serviceName": "Разовый сеанс",
+    "price": "2 500",
+    "unit": "сом",
+    "date": "2026-10-08",
+    "time": "09:00",
+    "status": "paid"
+  }
+]

@@ -1,0 +1,250 @@
+.schedule-section {
+  padding-top: 48px;
+}
+ 
+/* ===== Календарная сетка ===== */
+.calendar-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #e2ece8;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 8px 30px rgba(23, 58, 50, 0.05);
+  animation: rise-in 0.65s ease both;
+}      
+
+.calendar-day {
+  background: #f7fbf9;
+  border-radius: 14px;
+  padding: 18px 10px;
+  text-align: center;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+} 
+
+
+
+.calendar-day-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #159b79;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.calendar-time {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3c35;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(23, 58, 50, 0.06);
+}
+
+.schedule-table {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid #79f4c3;
+  animation: rise-in 0.65s ease both;
+}
+
+.schedule-head,
+.schedule-row {
+  display: grid;
+  grid-template-columns: 70px 90px 1.4fr 1fr 0.8fr;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 4px;
+  border-bottom: 1px solid #e2ece8;
+}
+
+.schedule-head {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #7a8f88;
+}
+
+.schedule-row {
+  font-size: 14px;
+  color: #355049;
+  transition: background 0.2s ease;
+}
+
+.schedule-row:hover {
+  background: rgba(21, 155, 121, 0.05);
+}
+
+.schedule-row strong {
+  color: #159b79;
+  font-size: 15px;
+}
+
+.schedule-level {
+  color: #6f827c;
+}
+
+.pricing-section {
+  background: #edf8f4;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.price-plan {
+  background: white;
+  border: 1px solid #e2ece8;
+  border-radius: 24px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: rise-in 0.7s ease both;
+}
+
+.price-plan:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.price-plan:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.price-plan.featured {
+  border-color: #159b79;
+  box-shadow: 0 18px 40px rgba(21, 155, 121, 0.12);
+  transform: translateY(-4px);
+}
+
+.price-name {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #159b79;
+  text-transform: uppercase;
+}
+
+.price-value {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price-value strong {
+  font-size: 40px;
+  letter-spacing: -1.5px;
+  color: #173a32;
+}
+
+.price-value span {
+  color: #7a8f88;
+  font-size: 14px;
+}
+
+.price-plan p {
+  margin: 0;
+  color: #71837e;
+  line-height: 1.6;
+  font-size: 14px;
+  min-height: 48px;
+}
+
+.price-plan ul {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  flex: 1;
+}
+
+.price-plan li {
+  font-size: 13px;
+  color: #355049;
+  padding-left: 18px;
+  position: relative;
+}
+
+.price-plan li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #159b79;
+}
+
+.price-plan .btn {
+  justify-content: center;
+  text-align: center;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 900px) {
+  .calendar-week {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 12px;
+  }
+ 
+  @media (max-width: 600px) {
+  .calendar-week {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .schedule-row {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto;
+    gap: 6px 14px;
+  }
+
+  .schedule-row span:nth-child(3) {
+    grid-column: 2;
+    font-weight: 600;
+  }
+
+  .schedule-row span:nth-child(4),
+  .schedule-row span:nth-child(5) {
+    grid-column: 2;
+    font-size: 12px;
+    color: #7a8f88;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-plan.featured {
+    transform: none;
+  }
+}
+}

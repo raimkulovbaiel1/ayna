@@ -1,0 +1,123 @@
+.admin-section {
+  padding-top: 36px;
+  padding-bottom: 90px;
+}
+
+.admin-muted {
+  color: #71837e;
+}
+
+.admin-error {
+  color: #b42318;
+}
+
+.admin-list {
+  display: grid;
+  gap: 16px;
+}
+
+.admin-card {
+  background: white;
+  border: 1px solid #e2ece8;
+  border-radius: 22px;
+  padding: 22px 24px;
+  display: grid;
+  gap: 16px;
+  animation: booking-in 0.45s ease both;
+}
+
+.admin-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.admin-card-top strong {
+  display: block;
+  font-size: 20px;
+  color: #173a32;
+  margin-bottom: 4px;
+}
+
+.admin-card-top a {
+  color: #159b79;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-status {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status-paid {
+  background: #d8f3e9;
+  color: #0f7a5c;
+}
+
+.status-pending_payment {
+  background: #fff4e5;
+  color: #b54708;
+}
+
+.status-cancelled {
+  background: #f2f4f3;
+  color: #66756f;
+}
+
+.admin-meta {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.admin-meta dt {
+  font-size: 11px;
+  color: #7a8f88;
+  margin-bottom: 4px;
+}
+
+.admin-meta dd {
+  margin: 0;
+  font-weight: 700;
+  color: #29453f;
+}
+
+.admin-comment {
+  margin: 0;
+  padding: 12px 14px;
+  background: #f4faf7;
+  border-radius: 12px;
+  color: #4d635c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.admin-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .admin-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-card-top {
+    flex-direction: column;
+  }
+
+  .admin-meta {
+    grid-template-columns: 1fr;
+  }
+}
